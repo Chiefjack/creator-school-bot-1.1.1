@@ -438,16 +438,19 @@ async def supportresponse(ctx, member: discord.Member):
 async def help(ctx):
 	embed = discord.Embed(title="**COMMANDS**", description="This bots commands are shown below (the prefix is cs!)"
 															"\n---", color=0x00ff00)
-	embed.add_field(name="**PUBLIC COMMANDS**", value= "**cs!help** - Displays this message for the list of bot commands\n"
+	embed.add_field(name="**GENERAL COMMANDS**", value= "**cs!help** - Displays this message for the list of bot commands\n"
 													 "**cs!support** - Have a question or query about the server or bot? Just ask after cs!support\n"
 													 "**cs!suggest** - Have a suggestion for the server or bot? Just tell us after cs!suggest\n"
 													 "**cs!ping** - Checks and returns the bots ping\n"
-													 "**cs!format** - Displays the teacher application format\n"
+													 "**cs!report** - Report a user. Type cs!report <tag user> <reason/proof>. If you need to send image proof, please DM that straight to a Staff member, ideally the owner as unforunately the bot doesn't support the sending of images. EG. cs!report @ChiefJack_YT#4450 Being the Owner\n"
+													 "---")
+
+	embed.add_field(name="**SCHOOL-RELATED COMMANDS**", value= "**cs!format** - Displays the teacher application format\n"
 													 "**cs!tutor** - Request a tutor for you desired class. Type cs!tutor <class name here>. See pinned message in #private-tutoring\n"
 													 "**cs!teacherrate** - Rate a teacher out of 10 (it is anonymous). Type cs!teacherrate <tag teacher> <score out of 10>. EG. cs!teacherrate @ChiefJack_YT#4450 10\n"
 													 "**cs!tutorrate** - Rate a tutor out of 10 (it is anonymous). Type cs!tutorrate <tag tutor> <score out of 10>. EG. cs!tutorrate @ChiefJack_YT#4450 10\n"
-													 "**cs!report** - Report a user. Type cs!report <tag user> <reason/proof>. If you need to send image proof, please DM that straight to a Staff member, ideally the owner as unforunately the bot doesn't support the sending of images. EG. cs!report @ChiefJack_YT#4450 Being the Owner\n"
 													 "---")
+													 
 	embed.add_field(name="**STAFF COMMANDS**", value= "**cs!staffhelp** - Use this for the list of Staff commands and how to use them\n"
 													"---")
 	embed.set_thumbnail(url=bot.user.avatar_url)
