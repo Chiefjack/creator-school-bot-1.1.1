@@ -1,0 +1,1 @@
+worker: python bot1.1.1.py
